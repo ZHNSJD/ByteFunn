@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Get Text Input Field Value in JavaScript</title>
+<link rel="stylesheet" href="Palindrome.css" />
+</head>
+<body>
+<h1>Palindrome Checker</h1>
+   <input type="text" placeholder="Enter here..." id="myInput" class="colorshadow">
+    <button class="button" onclick="getInputValue();">Test it</button>
+
+    <script>
+        function getInputValue(){
+            var inputVal = document.getElementById("myInput").value;
+            
+            str2 = inputVal.replace(/[.,\s?]/g, "");
+
+            str2 = str2.toLowerCase()
+
+            var splitString = str2.split("");
+            var reverseArray = splitString.reverse();
+            var joinArray = reverseArray.join("");
+
+            if (str2 == joinArray){
+            alert(inputVal + " is a palindrome")
+            }else{
+            alert(inputVal + " is not a palindrome")
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="Palindrome.css" />
+</body>
+</html>
